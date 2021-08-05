@@ -26,7 +26,7 @@
       
           render() {
            return (
-             <div><center><h1>INSIDE</h1>
+             <div><center><h1>{this.props.name}</h1>
               <h1> {this.state.count} </h1>
               <button onClick={this.decrement}>Decrement</button>
               <button onClick={this.increment}>Increment</button>
@@ -50,8 +50,8 @@
             render() {
                 return (
                     <div>
-                    <Counter />
-                    <Counter />
+                    <Counter name="Inside"/>
+                    <Counter name="Outside"/>
 
                     </div>
                 );
