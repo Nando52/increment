@@ -27,7 +27,7 @@
            return (
              <div>
               <h1> {this.state.count} </h1>
-              <button onClick={this.Increment}>Increment</button>
+              <button onClick={this.increment}>Increment</button>
              </div>
              );
            }
@@ -35,7 +35,7 @@
              this.setState(state => ({
              count: state.count + 1
              }));
-           
+           }
      }
         
         class App extends React.Component {
