@@ -14,17 +14,16 @@
 <body>
     <div id="app"></div>
     <script type="text/babel">
-        class Hello extends React.Component {
+     class Counter extends React.Component {
+     
+     }
+        class App extends React.Component {
             render() {
                 return (
                 <div>
-                    <h1>Hello World!</h1>
-                    <button onClick={this.handleClick}>Click Here</button>
+                    <Counter />
                     </div>
                 );
-            }
-            handleClick = () => {
-            alert("Hello world");
             }
         }
 
