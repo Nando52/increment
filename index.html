@@ -14,6 +14,12 @@
 </head>
 
 <body>
+    <script>
+  document.body.addEventListener("wheel", e=>{
+    if(e.ctrlKey)
+      e.preventDefault();//prevent zoom
+  });
+</script>
     <div id="app"></div>
     <script type="text/babel">
      class Counter extends React.Component {
