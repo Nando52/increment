@@ -1,65 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
-
+    <link rel="stylesheet" href="style.scss" />
     <title>Increment</title>
-    
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="app"></div>
     <script type="text/babel">
-     class Counter extends React.Component {
-     
-         constructor(props) {
-             super(props);
-             this.state = {
-               count: 0
-             };
-      }
-      
-          render() {
-           return (
-             <div><center><h1>{this.props.name}</h1>
-              <h1> {this.state.count} </h1>
-              <button onClick={this.decrement}>Decrement</button>
-              <button onClick={this.increment}>Increment</button>
-              </center>
-             </div>
-             );
-           }
-          increment = () => {
-             this.setState({
-             count: this.state.count + 1
-             });
-           }
-           decrement = () => {
-             this.setState({
-             count: this.state.count - 1
-             });
-           }
-     }
-        
-        class App extends React.Component {
-            render() {
-                return (
-                    <div>
-                    <Counter name="Inside"/>
-                    <Counter name="Outside"/>
-                    </div>
-                );
-            }
+      class Counter extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {
+            count: 0,
+          };
         }
 
-        ReactDOM.render(<App />, document.querySelector("#app"));
-    </script>
-</body>
+        render() {
+          return (
+            <div>
+              <center>
+                <h1>{this.props.name}</h1>
+                <h1> {this.state.count} </h1>
+                <button onClick={this.decrement}>Decrement</button>
+                &nbsp;&nbsp;&nbsp;
+                <button onClick={this.increment}>Increment</button>
+              </center>
+            </div>
+          );
+        }
+        increment = () => {
+          this.setState({
+            count: this.state.count + 1,
+          });
+        };
+        decrement = () => {
+          this.setState({
+            count: this.state.count - 1,
+          });
+        };
+      }
 
+      class App extends React.Component {
+        render() {
+          return (
+            <div>
+              <Counter name="Inside" />
+              <Counter name="Outside" />
+            </div>
+          );
+        }
+      }
+
+      ReactDOM.render(<App />, document.querySelector("#app"));
+    </script>
+  </body>
 </html>
