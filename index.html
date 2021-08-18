@@ -74,16 +74,13 @@
               <Counter name="Outside" />
             </div>
           );
-=======
              </div>
              );
            }
            increment = () => {
-<<<<<<< HEAD
              this.setState ({
              count: this.state.count + 1
              });
-=======
              this.setState (state => ({
              count: state.count + 1
              }));
@@ -93,7 +90,6 @@
              this.setState (state => ({
              count: state.count - 1
              }));
->>>>>>> parent of bd7b9a0... Update index.html
            }
      }
         class App extends React.Component {
