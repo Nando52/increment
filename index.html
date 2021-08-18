@@ -51,6 +51,7 @@
               <h1> {this.state.count} </h1>
               <button onClick={this.decrement}>Decrement</button>
               <button onClick={this.increment}>Increment</button>
+<<<<<<< HEAD
 >>>>>>> daa176de2a57fad7a698b1dc3c2094ef3da1dac9
               </center>
             </div>
@@ -76,6 +77,25 @@
               <Counter name="Outside" />
             </div>
           );
+=======
+             </div>
+             );
+           }
+           increment = () => {
+             this.setState ({
+             count: this.state.count + 1
+             });
+           }
+     }
+        class App extends React.Component {
+            render() {
+                return (
+                    <div>
+                    <Counter />
+                    </div>
+                );
+            }
+>>>>>>> parent of c82fd56... Update index.html
         }
       }
 
